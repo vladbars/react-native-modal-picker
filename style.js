@@ -8,28 +8,30 @@ const PADDING = 8;
 const BORDER_RADIUS = 5;
 const FONT_SIZE = 16;
 const HIGHLIGHT_COLOR = 'rgba(0,118,255,0.9)';
-const OPTION_CONTAINER_HEIGHT = height / 2;
+const OPTION_CONTAINER_HEIGHT = height / 3;
 
 export default StyleSheet.create({
 
   overlayStyle: {
     width: width,
     height: height,
-    backgroundColor: 'rgba(0,0,0,0.7)'
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    justifyContent: 'flex-end'
   },
 
   optionContainer: {
     borderRadius: BORDER_RADIUS,
     width: width * 0.8,
-    height: OPTION_CONTAINER_HEIGHT,
+
     backgroundColor: 'rgba(255,255,255,0.8)',
     left: width * 0.1,
-    top: (height - OPTION_CONTAINER_HEIGHT) / 2
+
   },
 
   cancelContainer: {
     left: width * 0.1,
-    top: (height - OPTION_CONTAINER_HEIGHT) / 2 + 10
+    marginTop: 5,
+    marginBottom: 25
   },
 
   selectStyle: {

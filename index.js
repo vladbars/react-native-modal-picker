@@ -1,8 +1,8 @@
 'use strict';
 
-import React, { PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-import { View, StyleSheet, Dimensions, Modal, Text, ScrollView, TouchableOpacity, Platform} from 'react-native';
+import { View, StyleSheet, Dimensions, Modal, Text, ScrollView, TouchableOpacity, Platform } from 'react-native';
 
 import styles from './style';
 import BaseComponent from './BaseComponent';
@@ -136,14 +136,15 @@ export default class ModalPicker extends BaseComponent {
                             {options}
                         </View>
                     </ScrollView>
+                    <View style={styles.cancelContainer}>
+                        <TouchableOpacity onPress={this.close}>
+                            <View style={[styles.cancelStyle, this.props.cancelStyle]}>
+                                <Text style={[styles.cancelTextStyle, this.props.cancelTextStyle]}>{this.props.cancelText}</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-                <View style={styles.cancelContainer}>
-                    <TouchableOpacity onPress={this.close}>
-                        <View style={[styles.cancelStyle, this.props.cancelStyle]}>
-                            <Text style={[styles.cancelTextStyle, this.props.cancelTextStyle]}>{this.props.cancelText}</Text>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+
 
             </View>);
   }
