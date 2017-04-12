@@ -31,7 +31,7 @@ export default StyleSheet.create({
   cancelContainer: {
     left: width * 0.1,
     marginTop: 5,
-    marginBottom: 25
+    marginBottom: 50
   },
 
   selectStyle: {
